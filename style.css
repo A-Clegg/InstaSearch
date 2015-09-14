@@ -25,6 +25,7 @@
   float: left;
   width: 200px;
   height: 100%;
+  border-style: ridge;
   background-color: green;
 }
 
@@ -39,6 +40,9 @@ Sarah
 /*
 Ammon
 */
+.body {
+  float: left;
+}
 
 /*
 Taylor
