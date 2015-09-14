@@ -44,6 +44,31 @@ Ammon
   float: left;
 }
 
+.button {
+  margin: 5px;
+  display: block;
+  height: 40px;
+  width: 200px;
+  background: #2026E3;
+  border: 2px solid;
+  border-color: #333333;
+  color: #FFFFFF;
+  text-align: center;
+  font: 30px Arial;
+
+  border-radius: 50px;
+  box-shadow: 0 8px 0 #4944DB;
+}
+
+.button:hover {
+  background: #1016D2;
+}
+
+a.button
+{
+  text-decoration: none;
+}
+
 /*
 Taylor
 */
