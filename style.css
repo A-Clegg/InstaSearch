@@ -1,3 +1,13 @@
+.left
+{
+  float: left;
+}
+
+.right
+{
+  float:right;
+}
+
 .header {
   position: fixed;
   top: 0;
@@ -18,7 +28,7 @@
   bottom: 0;
   width: 100%;
   height: 50px;
-  background-color: red;
+  background-color: yellow;
 }
 
 .savedsearches {
@@ -61,7 +71,7 @@ Ammon
 }
 
 .button:hover {
-  background: #1016D2;
+  background: #1016C2;
 }
 
 a.button
