@@ -130,3 +130,6 @@ Taylor
   border-color: blue;
   border-style: solid;
 }
+.search_box {
+  padding: 5px;
+}
