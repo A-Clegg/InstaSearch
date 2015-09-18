@@ -1,3 +1,18 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #FFF;
+  height: 100%;
+}
+
+.clear
+{
+  display: block;
+  clear: both;
+}
+
 .left
 {
   float: left;
@@ -43,19 +58,29 @@
 }
 
 .picture {
-  padding: 20px;
-  border-color:black;
+  padding: 10px;
+  border-color:#CCCCCC;
   border-width:1px;
   border-style: solid;
-  width: 16%;
-  margin-bottom: 4px;
+  width: 32%;
   float:left;
-  margin-right:4px;
-  margin-top: 6px;
-  margin-left:4px;
-  position:relative;
   height: auto !important;
   height: 100%;
+}
+
+.picture:nth-child(n) {
+  margin-right:2%;
+  margin-bottom:2%;
+}
+
+.picture:nth-child(3n) {
+  margin-right: 0;
+}
+
+.picture img {
+  display: block;
+  margin: 0 0 10px;
+  width: 100%;
 }
 
 
