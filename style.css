@@ -1,3 +1,18 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #FFF;
+  height: 100%;
+}
+
+.clear
+{
+  display: block;
+  clear: both;
+}
+
 .left
 {
   float: left;
@@ -13,14 +28,22 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 100px;
+  height: 75px;
   background-color: blue;
   border-bottom: solid 1px #DDDDDD;
 }
 
 .main {
-  margin-top: 100px;
-  margin-bottom: 100px;
+  clear: both;
+  height: 100%;
+  margin-top: 75px; /* Accounts for the header */
+}
+
+/* Renamed body class*/
+.content {
+  float: left;
+  width: 90%;
+  margin-bottom: 50px;
 }
 
 .footer {
@@ -34,28 +57,38 @@
 
 .savedsearches {
   float: left;
-  width: 200px;
+  width: 10%;
   height: 100%;
   border: 0px;
-  border-right: 2px;
+  /*border-right: 2px;
   border-style: ridge;
   /*background-color: green; */
 }
 
 .picture {
-  padding: 20px;
-  border-color:black;
+  padding: 10px;
+  border-color:#CCCCCC;
   border-width:1px;
   border-style: solid;
-  width: 16%;
-  margin-bottom: 4px;
+  width: 32%;
   float:left;
-  margin-right:4px;
-  margin-top: 6px;
-  margin-left:4px;
-  position:relative;
   height: auto !important;
   height: 100%;
+}
+
+.picture:nth-child(n) {
+  margin-right:2%;
+  margin-bottom:2%;
+}
+
+.picture:nth-child(3n) {
+  margin-right: 0;
+}
+
+.picture img {
+  display: block;
+  margin: 0 0 10px;
+  width: 100%;
 }
 
 
@@ -73,15 +106,11 @@ Sarah
 /*
 Ammon
 */
-.body {
-  float: left;
-}
-
-.body h2 {
+.content h2 {
   font: 30px Arial;
 }
 
-.body p {
+.content p {
   font: 15px Arial;
 }
 
