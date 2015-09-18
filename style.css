@@ -42,9 +42,23 @@
   /*background-color: green; */
 }
 
-/*
-This is Ahmeds section
-*/
+.picture {
+  padding: 20px;
+  border-color:black;
+  border-width:1px;
+  border-style: solid;
+  width: 16%;
+  margin-bottom: 4px;
+  float:left;
+  margin-right:4px;
+  margin-top: 6px;
+  margin-left:4px;
+  position:relative;
+  height: auto !important;
+  height: 100%;
+}
+
+
 
 /*
 Sarah
@@ -89,6 +103,7 @@ a.button
 {
   text-decoration: none;
 }
+
 
 /*
 Taylor
