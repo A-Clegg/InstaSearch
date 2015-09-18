@@ -87,6 +87,12 @@ body {
 
 /*
 Sarah
+
+
+
+
+
+
 */
 
 /*
@@ -133,3 +139,19 @@ a.button
 /*
 Taylor
 */
+.profile_picture {
+
+  padding: 10px;
+
+
+}
+.p_username {
+  margin: 0 auto;
+  border: 5px;
+
+}
+.p_info {
+  border-width: 5px;
+  border-color: blue;
+  border-style: solid;
+}
