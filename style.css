@@ -216,6 +216,7 @@ Taylor
   border-style: solid;
 }
 .search_box {
-  padding: 5px;
+  padding-bottom: 22px;
+  width: 300px;
   float: left;
 }
