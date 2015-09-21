@@ -71,7 +71,7 @@ body {
   border-width:1px;
   border-style: solid;
   width: 32%;
-  float:left;
+  float: left;
   height: auto !important;
   height: 100%;
 }
@@ -161,4 +161,5 @@ Taylor
 }
 .search_box {
   padding: 5px;
+  float: left;
 }
