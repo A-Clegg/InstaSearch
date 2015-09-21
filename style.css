@@ -178,7 +178,7 @@ Ammon
   background: #2026E3;
   border: 2px solid;
   border-color: #333333;
-  color: #EEEEEE;
+  color: #2026E3;
   text-align: center;
   font: 30px Arial;
 
@@ -192,6 +192,8 @@ Ammon
 
 a.button
 {
+  background-color: #2026E3;
+  color: #EEEEEE;
   text-decoration: none;
 }
 
