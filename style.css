@@ -62,13 +62,20 @@
 
 /*
 Sarah
-
-
-
-
-
-
 */
+.center {
+  position: relative;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+  height: 100%;
+  max-width: 1000px;
+}
+
+.sbody {
+  width: 100%;
+}
+
 
 /*
 Ammon
