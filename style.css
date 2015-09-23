@@ -54,7 +54,7 @@ a:link, a:visited{
   display: inline-block;
   width: 120 px;
   background-color:inherit;
-  color:white;
+  color:#EEEEEE;
   text-decoration: none;
   font-weight: bold;
   text-transform: uppercase;
@@ -183,7 +183,7 @@ Ammon
   background: #2026E3;
   border: 2px solid;
   border-color: #333333;
-  color: #2026E3;
+  color: #EEEEEE;
   text-align: center;
   font: 30px Arial;
 
