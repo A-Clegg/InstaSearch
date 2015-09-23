@@ -9,6 +9,10 @@ body {
   height: 100%;
 }
 
+.margin_left {
+  margin-left: 10%;
+}
+
 /*
 .clear
 {
@@ -91,15 +95,16 @@ a:hover{
   clear: both;
   height: 100%;
   margin-top:100px; /* Accounts for the header */
-  margin-left: 10%;
+  /*margin-left: 10%; */
   margin-right: auto;
 }
 
 /* Renamed body class*/
 .content {
   float: left;
-  width: 90%;
+  width: 80%;
   margin-bottom: 50px; /* Accounts for footer */
+  margin-right: 10%; /*Put a margin equal to the saved searches on the other side */
 }
 
 .footer {
