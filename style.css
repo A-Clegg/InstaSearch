@@ -99,7 +99,7 @@ a:hover{
 .content {
   float: left;
   width: 90%;
-  margin-bottom: 50px;
+  margin-bottom: 50px; /* Accounts for footer */
 }
 
 .footer {
@@ -223,6 +223,6 @@ Taylor
 }
 .search_box {
   padding-bottom: 22px;
-  width: 300px;
+  width: 100%;
   float: left;
 }
