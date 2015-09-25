@@ -163,8 +163,6 @@ a:hover{
   width: 100%;
 }
 
-
-
 /*
 Sarah
 */
@@ -179,9 +177,17 @@ color:  #CCCCCC;
 }
 
 
+
 .s_relative{
   position: relative;
+=======
+.content textarea{
+  margin:4px;
+  font: Arial;
+  resize: none;
+  width:173px;
 }
+
 
 /*
 Ammon
