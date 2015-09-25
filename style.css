@@ -163,8 +163,6 @@ a:hover{
   width: 100%;
 }
 
-
-
 /*
 Sarah
 */
@@ -178,20 +176,12 @@ color:  #CCCCCC;
   margin: 4px;
 }
 
-<<<<<<< HEAD
 .content textarea{
   margin:4px;
   font: Arial;
   resize: none;
 }
 
-#bioInput {
-  height: 100px;
-=======
-.s_relative{
-  position: relative;
->>>>>>> 0782ccd690318e9dda2e5f3e191c1037442ee2c4
-}
 
 /*
 Ammon
