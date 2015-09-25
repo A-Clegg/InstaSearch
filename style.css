@@ -12,20 +12,20 @@ body {
 }
 
 p{
-  color: white;
+  color: #EEEEEE;
 }
 
 .margin_left {
   margin-left: 10%;
 }
 
-/*
+
 .clear
 {
   display: block;
   clear: both;
 }
-*/
+
 .insta{
   color:#BA9570;
 }
