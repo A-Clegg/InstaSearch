@@ -155,13 +155,14 @@ Sarah
 .content h3{
 font: 20px Arial;
 color:  gray;
-/*text-align: center*/
 }
 
 .content input{
   margin: 4px;
 }
 
+.s_relative{
+  position: relative;
 
 /*
 Ammon
