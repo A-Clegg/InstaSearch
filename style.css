@@ -180,7 +180,8 @@ color:  #CCCCCC;
 
 .s_relative{
   position: relative;
-=======
+}
+
 .content textarea{
   margin:4px;
   font: Arial;
@@ -229,28 +230,31 @@ a.button
   text-decoration: none;
 }
 
-.savedsearch_button
-{
-  margin: 5px;
+.savedsearch_button {
   display: block;
-  height: 40px;
-  width: 200px;
+  margin-bottom: 2px;
+  margin-top: 0px;
+  height: auto;
+  width: 95%;
+  margin-right: 5%;
   background: #00DD00;
   border: 2px solid;
   border-color: #333333;
-  color: #EEEEEE;
+  border-radius: 20px;
+  box-shadow: 0 2px 0 #001F00;
+  color: #5D4A38;
   text-align: center;
-  font: 30px Arial;
+  font: 15px Arial;
 }
 
 .savedsearch_button:hover {
   background: #00B800;
 }
 
-a.savedsearch_button
-{
+a.savedsearch_button {
+  margin-top: 0px;
   background-color: #00CC00;
-  color: #EEEEEE;
+  color: #5D4A38;
   text-decoration: none;
 }
 /*
