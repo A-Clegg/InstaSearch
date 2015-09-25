@@ -6,7 +6,17 @@
 
 body {
   background: #FFF;
+  background-image: url(green-black.gif);
+  background-size: cover;
   height: 100%;
+}
+
+p{
+  color: white;
+}
+
+.margin_left {
+  margin-left: 10%;
 }
 
 /*
@@ -18,7 +28,6 @@ body {
 */
 .insta{
   color:#BA9570;
-
 }
 
 .first
@@ -29,6 +38,7 @@ body {
 .search{
   color: #5D4A38;
 }
+
 .instasearch
 {
   float:left;
@@ -54,7 +64,7 @@ a:link, a:visited{
   display: inline-block;
   width: 120 px;
   background-color:inherit;
-  color:white;
+  color:#EEEEEE;
   text-decoration: none;
   font-weight: bold;
   text-transform: uppercase;
@@ -63,7 +73,7 @@ a:link, a:visited{
 }
 
 a:hover{
-  color:orange;
+  color:#007A00;
 }
 
 
@@ -83,7 +93,7 @@ a:hover{
   left: 0;
   width: 100%;
   height: 75px;
-  background-color: blue;
+  background-color: #000000;
   border-bottom: solid 1px #DDDDDD;
 }
 
@@ -91,24 +101,29 @@ a:hover{
   clear: both;
   height: 100%;
   margin-top:100px; /* Accounts for the header */
-  margin-left: 10%;
+  /*margin-left: 10%; */
   margin-right: auto;
 }
 
 /* Renamed body class*/
 .content {
   float: left;
-  width: 90%;
-  margin-bottom: 50px;
+  width: 80%;
+  margin-bottom: 50px; /* Accounts for footer */
+  /*margin-right: 10%; /*Put a margin equal to the saved searches on the other side */
 }
 
 .footer {
   position: fixed;
+  color: white;
   left: 0;
   bottom: 0;
   width: 100%;
   height: 50px;
-  background-color: yellow;
+  background-color: #001F00;
+  text-align: center;
+  font: 10px Arial;
+  line-height: 50px;
 }
 
 .savedsearches {
@@ -116,6 +131,7 @@ a:hover{
   width: 10%;
   height: 100%;
   border: 0px;
+  margin-left: 0px;
   /*border-right: 2px;
   border-style: ridge;
   /*background-color: green; */
@@ -183,7 +199,7 @@ Ammon
   background: #2026E3;
   border: 2px solid;
   border-color: #333333;
-  color: #2026E3;
+  color: #EEEEEE;
   text-align: center;
   font: 30px Arial;
 
@@ -224,6 +240,28 @@ Taylor
 }
 .search_box {
   padding-bottom: 22px;
-  width: 300px;
+  width: 100%;
   float: left;
+}
+
+.sidebar-savedsearches{
+  float: right;
+  width: 18%;
+  top: 80px;
+}
+
+li#saved_searches {
+    padding: 0;
+}
+
+li#saved_searches li {
+    display: inline;
+}
+
+li#saved_searches li a {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 4px 4px 0 0;
 }
