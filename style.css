@@ -170,7 +170,7 @@ Sarah
 */
 .content h3{
 font: 20px Arial;
-color:  gray;
+color:  #CCCCCC;
 /*text-align: center*/
 }
 
@@ -179,15 +179,21 @@ color:  gray;
 }
 
 
+.s_relative{
+  position: relative;
+}
+
 /*
 Ammon
 */
 .content h2 {
   font: 30px Arial;
+  color: #DDDDDD;
 }
 
 .content p {
   font: 15px Arial;
+  color: #DDDDDD;
 }
 
 .button {
@@ -195,7 +201,7 @@ Ammon
   display: block;
   height: 40px;
   width: 200px;
-  background: #2026E3;
+  background: #00CC00;
   border: 2px solid;
   border-color: #333333;
   color: #EEEEEE;
@@ -203,20 +209,19 @@ Ammon
   font: 30px Arial;
 
   border-radius: 50px;
-  box-shadow: 0 8px 0 #4944DB;
+  box-shadow: 0 8px 0 #001F00;
 }
 
 .button:hover {
-  background: #1016C2;
+  background: #00B800;
 }
 
 a.button
 {
-  background-color: #2026E3;
+  background-color: #00CC00;
   color: #EEEEEE;
   text-decoration: none;
 }
-
 
 /*
 Taylor
