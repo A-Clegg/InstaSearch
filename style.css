@@ -107,10 +107,10 @@ a:hover{
 
 /* Renamed body class*/
 .content {
-  float: left;
+  float: right;
   width: 80%;
   margin-bottom: 50px; /* Accounts for footer */
-  /*margin-right: 10%; /*Put a margin equal to the saved searches on the other side */
+  margin-right: 10%; /*Put a margin equal to the saved searches on the other side */
 }
 
 .footer {
@@ -171,14 +171,13 @@ Sarah
 .content h3{
 font: 20px Arial;
 color:  gray;
+/*text-align: center*/
 }
 
 .content input{
   margin: 4px;
 }
 
-.s_relative{
-  position: relative;
 
 /*
 Ammon
@@ -240,28 +239,13 @@ Taylor
 }
 .search_box {
   padding-bottom: 22px;
-  width: 100%;
+  width: 90%;
   float: left;
 }
 
 .sidebar-savedsearches{
-  float: right;
-  width: 18%;
+  float: left;
+  padding: 5px;
+  width: 8%;
   top: 80px;
-}
-
-li#saved_searches {
-    padding: 0;
-}
-
-li#saved_searches li {
-    display: inline;
-}
-
-li#saved_searches li a {
-    background-color: black;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 4px 4px 0 0;
 }
