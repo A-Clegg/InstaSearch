@@ -19,13 +19,13 @@ p{
   margin-left: 10%;
 }
 
-/*
+
 .clear
 {
   display: block;
   clear: both;
 }
-*/
+
 .insta{
   color:#BA9570;
 }
@@ -229,30 +229,6 @@ a.button
   text-decoration: none;
 }
 
-.savedsearch_button
-{
-  margin: 5px;
-  display: block;
-  height: 40px;
-  width: 200px;
-  background: #00DD00;
-  border: 2px solid;
-  border-color: #333333;
-  color: #EEEEEE;
-  text-align: center;
-  font: 30px Arial;
-}
-
-.savedsearch_button:hover {
-  background: #00B800;
-}
-
-a.savedsearch_button
-{
-  background-color: #00CC00;
-  color: #EEEEEE;
-  text-decoration: none;
-}
 /*
 Taylor
 */
