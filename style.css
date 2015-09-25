@@ -107,10 +107,10 @@ a:hover{
 
 /* Renamed body class*/
 .content {
-  float: left;
+  float: right;
   width: 80%;
   margin-bottom: 50px; /* Accounts for footer */
-  /*margin-right: 10%; /*Put a margin equal to the saved searches on the other side */
+  margin-right: 10%; /*Put a margin equal to the saved searches on the other side */
 }
 
 .footer {
@@ -176,6 +176,11 @@ color:  #CCCCCC;
   margin: 4px;
 }
 
+
+
+.s_relative{
+  position: relative;
+=======
 .content textarea{
   margin:4px;
   font: Arial;
@@ -269,12 +274,13 @@ Taylor
 }
 .search_box {
   padding-bottom: 22px;
-  width: 100%;
+  width: 90%;
   float: left;
 }
 
 .sidebar-savedsearches{
-  float: right;
-  width: 18%;
+  float: left;
+  padding: 5px;
+  width: 8%;
   top: 80px;
 }
