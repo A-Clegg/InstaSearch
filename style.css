@@ -177,8 +177,15 @@ color:  gray;
   margin: 4px;
 }
 
-.s_relative{
-  position: relative;
+.content textarea{
+  margin:4px;
+  font: Arial;
+  resize: none;
+}
+
+#bioInput {
+  height: 100px;
+}
 
 /*
 Ammon
