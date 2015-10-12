@@ -6,7 +6,7 @@
 
 body {
   background: #FFF;
-  background-image: url(green-black.gif);
+  background-image: url(/images/green-black.gif);
   background-size: cover;
   height: 100%;
 }
