@@ -10,6 +10,18 @@ router.get('/dashboard', function(req, res) {
 })
 
 // Sarah
+//not sure if this is right, so just comment it out if it's messing with stuff :)
+router.get('/profile', function(req, res) {
+  res.render('profile', {
+		layout: 'auth_base',
+    UserName: '{UserName}',
+    //Picture: ''
+    Picture: 'http://placehold.it/225x225',
+    Name: 'Full Name',
+    Bio: 'Biography',
+    Email: 'Email Address'
+  })
+})
 
 // Tyler
 
