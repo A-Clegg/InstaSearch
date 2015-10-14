@@ -26,5 +26,12 @@ router.get('/profile', function(req, res) {
 // Tyler
 
 // Ahmed
+router.get('/search', function(req, res) {
+  res.render('search', {
+		layout: 'auth_base',
+    title: 'User Search!',
+    welcome: 'Welcome to your search!'
+  })
+})
 
 module.exports = router
