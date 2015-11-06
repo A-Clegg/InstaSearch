@@ -6,7 +6,9 @@
   "dependencies": {
     "express": "~4.13.3",
     "express-handlebars": "~2.0.1",
-    "express-session": "~1.12.1"
+    "express-session": "~1.12.1",
+    "body-parser": "~1.14.1",
+    "request": "~2.65.0"
   },
   "devDependencies": {},
   "scripts": {

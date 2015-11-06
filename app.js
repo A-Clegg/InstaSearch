@@ -1,11 +1,13 @@
 var express 	= require('express')
 	, exphbs		= require('express-handlebars')
+	, bodyParser = require('body-parser')
+	, request		= require('request')
+	, session	 	= require('express-session')
 	, path 			= require('path')
   , port      = 3000
 	, indexRoutes = require('./routes/indexRoutes.js')
 	, userRoutes = require('./routes/userRoutes.js')
-	, session = require('express-session')
-	, config = require('./config')
+	, config 		= require('./config')
 
 var app = express();
 
@@ -21,13 +23,7 @@ app.use(session({
 	saveUninitialized: true
 }))
 
-app.get('/authorize', function(req, res) {
-	var qs = {
-		client_id: config.client_id,
-		redirect_uri: config.redirect_uri,
-		response_type: 'code'
-	}
-})
+app.use(bodyParser.urlencoded({extended: false}))
 
 app.use('/', indexRoutes);
 app.use('/', userRoutes);
