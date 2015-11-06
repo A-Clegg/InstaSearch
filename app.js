@@ -4,6 +4,7 @@ var express 	= require('express')
   , port      = 3000
 	, indexRoutes = require('./routes/indexRoutes.js')
 	, userRoutes = require('./routes/userRoutes.js')
+	, session = require('express-session')
 	, config = require('./config')
 
 var app = express();
