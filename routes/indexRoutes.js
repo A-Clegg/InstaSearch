@@ -1,6 +1,7 @@
 var express = require('express')
 var bodyParser = require('body-parser')
 var router = express.Router()
+var config 		= require('../config')
 
 router.get('/', function(req, res) {
    res.render('index', {
@@ -21,7 +22,7 @@ router.get('/authorize', function(req, res) {
 		response_type: 'code'
 	}
 
-	var query = querystringigy(qs)
+	var query = querystring.stringify(qs)
 
 	var url = 'https://api.instagram.com/oauth/authorize/?' + query
 
