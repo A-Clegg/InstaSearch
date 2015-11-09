@@ -29,6 +29,9 @@ router.get('/authorize', function(req, res) {
 })
 
 router.get('/auth/finalize', function(req, res) {
+  if (req.query.error == 'access_denied') {
+    return res.redirect('/')
+  }
 	var post_data =
 	{
 		client_id: config.client_id,
