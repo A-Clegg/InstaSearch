@@ -22,7 +22,8 @@ router.get('/profile', function(req, res) {
   })
 })
 
-// Tyler
+// Taylor
+
 
 // Ahmed
 router.get('/search', function(req, res) {
