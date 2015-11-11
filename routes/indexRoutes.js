@@ -1,7 +1,9 @@
 var express = require('express')
 var bodyParser = require('body-parser')
 var router = express.Router()
+var request = require ('request')
 var config 		= require('../config')
+var querystring = require('querystring')
 
 router.get('/', function(req, res) {
    res.render('index', {
