@@ -1,16 +1,15 @@
-
 <div class ="content">
   <div>
-    <h3>{{UserName}}</h2>
+    <h2>{{ user.username }}</h2>
   </div>
   <div>
-      <img src={{Picture}} alt="profile picture"><br>
+      <img src={{ user.profile_picture}} alt="profile picture"><br>
   </div>
   <div>
     <form>
-      <input type="text" name="Name" placeholder="{{Name}}" value=""><br>
-      <input type="email" name="email address" placeholder="{{Email}}" value=""><br>
-      <textarea rows="8" name="bio" placeholder="{{Bio}}"></textarea><br>
+      <input type="text" name="Name" placeholder="" value="{{ user.full_name }}"><br>
+      <input type="email" name="email address" placeholder="" value="{{user.email}}"><br>
+      <textarea rows="8" name="bio" placeholder="">{{user.bio}}</textarea><br>
       <button class="button" type="button">Save</button>
     </form>
   </div>
