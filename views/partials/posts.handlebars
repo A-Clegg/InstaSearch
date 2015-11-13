@@ -1,6 +1,6 @@
 {{#each feed}}
 <div class="picture">
   <img src="{{this.images.standard_resolution.url}}" alt="Your InstaFeed" />
-  <p> <span class = "left"> 3 likes </span>  <span class = "right" >4 comments </span> </p>
+  <p> <span class = "left"> {{this.likes.count}} likes </span>  <span class = "right" > {{this.comments.count}} comments </span> </p>
 </div>
 {{/each}}
