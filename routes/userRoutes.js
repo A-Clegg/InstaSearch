@@ -75,12 +75,13 @@ router.get('/profile', function(req, res, next) {
 })
 })
 
-// Taylor
 
 
-// Ahmed
+// taylor
 router.get('/search', function(req, res) {
-  res.render('search')
+  res.render('search', {
+    layout: 'auth_base'
+  })
 })
 
 router.post('/search', function(req, res) {
