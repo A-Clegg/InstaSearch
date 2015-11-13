@@ -80,12 +80,37 @@ router.get('/profile', function(req, res, next) {
 
 // Ahmed
 router.get('/search', function(req, res) {
-  res.render('search', {
-		layout: 'auth_base',
-    title: 'User Search!',
-    welcome: 'Welcome to your search!',
-    post: 
+  var options =
+  {
+    url: 'https://api.instagram.com/v1/users/self/feed?access_token=' + req.session.access_token
+  }
+  request.get(options, function(error, response, body)
+  {
+    if(error)
+    {
+      return res.redirect('/')
+    }
+    try
+    {
+        var feed = JSON.parse(body)
+    }
+    catch(err)
+    {
+      return res.redirect('/')
+    }
+
+    if(feed.meta.code > 200)
+    {
+      return res.redirect('/')
+    }
+
+    // console.log(feed)
+    res.render('search', {
+      layout: 'auth_base',
+      feed: feed.data
+    })
   })
 })
+
 
 module.exports = router
