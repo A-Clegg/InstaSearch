@@ -1,6 +1,6 @@
-{{#each posts}}
+
 <div class="picture">
-  <img src="http://placehold.it/300x200">
-  <p> <span class = "left"> 3 likes </span>  <span class = "right" >4 comments </span> </p>
+  {{#each feed}}
+    <img src="{{this.images.standard_resolution.url}}" alt="Your InstaFeed" />
+  {{/each}}
 </div>
-{{/each}}
