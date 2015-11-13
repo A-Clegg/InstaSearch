@@ -80,9 +80,13 @@ router.get('/profile', function(req, res, next) {
 
 // Ahmed
 router.get('/search', function(req, res) {
+  res.render('search')
+})
+
+router.post('/search', function(req, res) {
   var options =
   {
-    url: 'https://api.instagram.com/v1/users/self/feed?access_token=' + req.session.access_token
+    url: 'https://api.instagram.com/v1/tags/' + req.body.search + '/media/recent?access_token=' + req.session.access_token
   }
   request.get(options, function(error, response, body)
   {
