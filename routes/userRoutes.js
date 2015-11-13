@@ -3,15 +3,42 @@ var express = require('express')
 var router = express.Router()
 
 router.get('/dashboard', function(req, res) {
-  res.render('dashboard', {
-		layout: 'auth_base',
-    title: 'User Dashboard!',
-    welcome: 'Welcome to your dashboard!'
+  var options =
+  {
+    url: 'https://api.instagram.com/v1/users/self/feed?access_token=' + req.session.access_token
+  }
+  request.get(options, function(error, response, body)
+  {
+    if(error)
+    {
+      return res.redirect('/')
+    }
+    try
+    {
+        var feed = JSON.parse(body)
+    }
+    catch(err)
+    {
+      return res.redirect('/')
+    }
+
+    if(feed.meta.code > 200)
+    {
+      return res.redirect('/')
+    }
+
+    // console.log(feed)
+    res.render('dashboard', {
+      layout: 'auth_base',
+      feed: feed.data
+    })
   })
 })
 
+
+
 // Sarah
-//not sure if this is right, so just comment it out if it's messing with stuff :)
+// not sure if this is right, so just comment it out if it's messing with stuff :)
 router.get('/profile', function(req, res, next) {
   var options = {
     url: 'https://api.instagram.com/v1/users/self/?access_token=' + req.session.access_token
@@ -35,7 +62,6 @@ router.get('/profile', function(req, res, next) {
      //return next(profile.meta.error_message)
    }
 
-   console.log(profile)
 
   res.render('profile', {
 		layout: 'auth_base',

@@ -158,7 +158,7 @@ a:hover{
 }
 
 .picture img {
-  display: block;
+  display: inline-block;
   margin: 0 0 10px;
   width: 100%;
 }
