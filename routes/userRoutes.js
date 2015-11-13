@@ -27,7 +27,7 @@ router.get('/dashboard', function(req, res) {
       return res.redirect('/')
     }
 
-    console.log(feed)
+    //console.log(feed)
     res.render('dashboard', {
       layout: 'auth_base',
       feed: feed.data
