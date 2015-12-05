@@ -7,10 +7,24 @@
   </div>
   <div>
     <form>
-      <input type="text" name="Name" placeholder="" value="{{ user.full_name }}"><br>
-      <input type="email" name="email address" placeholder="" value="{{user.email}}"><br>
-      <textarea rows="8" name="bio" placeholder="">{{user.bio}}</textarea><br>
+      <!--<input type="hidden" name="" value="">-->
+      <p>
+      <input type="text" name="Name" placeholder="" value="{{ user.full_name }}">
+    </p>
+    <p>
+      <input type="email" name="email address" placeholder="" value="{{user.email}}">
+    </p>
+    <p>
+      <textarea rows="8" name="bio" placeholder="">{{user.bio}}</textarea>
+    </p>
+    <p>
       <button class="button" type="button">Save</button>
+    </p>
     </form>
+    {{#if success}}
+    <p style="color: green;">
+      {{success}}
+    </p>
+    {{/if}}
   </div>
 </div>

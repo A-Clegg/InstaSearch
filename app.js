@@ -8,6 +8,7 @@ var express 	= require('express')
 	, indexRoutes = require('./routes/indexRoutes.js')
 	, userRoutes = require('./routes/userRoutes.js')
 	, config 		= require('./config')
+	, db = require('./db')
 
 var app = express();
 

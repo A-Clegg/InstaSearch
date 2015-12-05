@@ -38,7 +38,6 @@ router.get('/dashboard', function(req, res) {
 
 
 // Sarah
-// not sure if this is right, so just comment it out if it's messing with stuff :)
 router.get('/profile', function(req, res, next) {
   var options = {
     url: 'https://api.instagram.com/v1/users/self/?access_token=' + req.session.access_token
@@ -62,15 +61,9 @@ router.get('/profile', function(req, res, next) {
      //return next(profile.meta.error_message)
    }
 
-
   res.render('profile', {
 		layout: 'auth_base',
     user: profile.data
-    // UserName: profile.username,
-    // Picture: profile.profile_picture,
-    // Name: profile.full_name,
-    // Bio: profile.bio,
-    // Email: 'Email Address'
   })
 })
 })
