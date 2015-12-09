@@ -33,7 +33,6 @@ router.get('/dashboard', function(req, res) {
       feed: feed.data
     })
   })
-  req.session.destroy();
 })
 
 

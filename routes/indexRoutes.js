@@ -8,15 +8,23 @@ var session = require('express-session')
 var Users = require('../models/users')
 
 router.get('/', function(req, res) {
-   res.render('index', {
- 		layout: 'base',
-   })
+  if(req.session.access_token) {
+    res.redirect('/dashboard')
+  } else {
+     res.render('index', {
+   		layout: 'base',
+     })
+  }
 })
 
 router.get('/index', function(req, res) {
-   res.render('index', {
- 		layout: 'base',
-   })
+  if(req.session.access_token) {
+    res.redirect('/dashboard')
+  } else {
+      res.render('index', {
+ 		     layout: 'base',
+       })
+     }
 })
 
 router.get('/logout', function(req, res) {
@@ -66,8 +74,9 @@ router.get('/auth/finalize', function(req, res) {
     user._id = user.id
     delete user.id
 
-    Users.find(user, function(document) {
+    Users.find(user._id, function(document) {
       if (!document) {
+        console.log("Document: ", document)
         Users.insert(user, function(result) {
           res.redirect('/dashboard')
         })
