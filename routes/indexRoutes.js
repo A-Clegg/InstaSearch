@@ -1,9 +1,10 @@
 var express = require('express')
 var bodyParser = require('body-parser')
 var router = express.Router()
-var request = require ('request')
+var request = require('request')
 var config 		= require('../config')
 var querystring = require('querystring')
+var session = require('express-session')
 
 router.get('/', function(req, res) {
    res.render('index', {
@@ -15,6 +16,12 @@ router.get('/index', function(req, res) {
    res.render('index', {
  		layout: 'base',
    })
+})
+
+router.get('/logout', function(req, res) {
+  req.session.destroy(function(err) {
+    res.redirect('/')
+  })
 })
 
 router.get('/authorize', function(req, res) {
@@ -56,5 +63,6 @@ router.get('/auth/finalize', function(req, res) {
 		res.redirect('/dashboard')
 	})
 })
+
 
 module.exports = router
