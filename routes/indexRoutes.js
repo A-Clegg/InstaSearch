@@ -4,6 +4,7 @@ var router = express.Router()
 var request = require ('request')
 var config 		= require('../config')
 var querystring = require('querystring')
+var Users = require('../models/users')
 
 router.get('/', function(req, res) {
    res.render('index', {
