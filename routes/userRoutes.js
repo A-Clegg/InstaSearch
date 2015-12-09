@@ -69,17 +69,17 @@ router.get('/profile', function(req, res, next) {
 })
 })
 
-// //not sure if this is right...comment it out if it's messing with everything..is this the right place to put this?
-// router.post('/profile', function(req, res) {
-//   var user= req.body
-//   //update the user
-//   Users.update(user, function(){
-//   res.render('/update', {
-//     user: user,
-//     success: 'profile updated!'
-//   })
-//   })
-// })
+//not sure if this is right...comment it out if it's messing with everything..is this the right place to put this?
+router.post('/profile', function(req, res) {
+  var user= req.body
+  //update the user
+  Users.update(user, function(){
+  res.render('/profile', {
+    user: user,
+    success: 'profile updated!'
+  })
+  })
+})
 
 // taylor
 router.get('/search', function(req, res) {
