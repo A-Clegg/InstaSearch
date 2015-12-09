@@ -8,6 +8,8 @@ var express 	= require('express')
 	, indexRoutes = require('./routes/indexRoutes.js')
 	, userRoutes = require('./routes/userRoutes.js')
 	, config 		= require('./config')
+	, db	= require('./db.js')
+	, Users = require('./models/users')
 
 var app = express();
 
@@ -27,6 +29,13 @@ app.use(bodyParser.urlencoded({extended: false}))
 
 app.use('/', indexRoutes);
 app.use('/', userRoutes);
+
+db.connect('mongodb://application:pax@ds027415.mongolab.com:27415/instadb', function(err){
+	if(err){
+    console.log('unable to cononect to Mongo.')
+    process.exit(1)
+  }
+})
 
 app.listen(port)
 

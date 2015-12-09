@@ -5,6 +5,7 @@ var request = require('request')
 var config 		= require('../config')
 var querystring = require('querystring')
 var session = require('express-session')
+var Users = require('../models/users')
 
 router.get('/', function(req, res) {
    res.render('index', {
@@ -56,12 +57,26 @@ router.get('/auth/finalize', function(req, res) {
 		form: post_data
 	}
 
-	request.post(options, function(error, response, body) {
-		var data = JSON.parse(body)
-		req.session.access_token = data.access_token
+  request.post(options, function(error, response, body) {
+    var data = JSON.parse(body)
+    var user = data.user
+    req.session.access_token = data.access_token
+    req.session.userId = data.user.id
 
-		res.redirect('/dashboard')
-	})
+    user._id = user.id
+    delete user.id
+
+    Users.find(user, function(document) {
+      if (!document) {
+        Users.insert(user, function(result) {
+          res.redirect('/dashboard')
+        })
+      }
+      else {
+        res.redirect('/dashboard')
+      }
+    })
+  })
 })
 
 
