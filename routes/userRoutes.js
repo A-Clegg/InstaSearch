@@ -41,43 +41,48 @@ router.get('/dashboard', function(req, res) {
 
 // Sarah
 router.get('/profile', function(req, res, next) {
-  var options = {
-    url: 'https://api.instagram.com/v1/users/self/?access_token=' + req.session.access_token
-  }
-
-  request.get(options, function(error, response, body) {
-    if(error){
-      return res.redirect('/')
-     }
-
-    try {
-     var profile = JSON.parse(body)
+  // var options = {
+  //   url: 'https://api.instagram.com/v1/users/self/?access_token=' + req.session.access_token
+  // }
+  //
+  // request.get(options, function(error, response, body) {
+  //   if(error){
+  //     return res.redirect('/')
+  //    }
+  //
+  //   try {
+  //    var profile = JSON.parse(body)
+  //   }
+  //  catch(err) {
+  //    //res.redirect('/')
+  //    return res.redirect('/')
+  //  }
+  //
+  //  if(profile.meta.code > 200) {
+  //    return res.redirect('/')
+  //    //return next(profile.meta.error_message)
+  //  }
+  Users.find(req.session.userId, function(document) {
+    if (!document) {
+      res.redirect('/')
+    } else {
+      res.render('profile', {
+    		layout: 'auth_base',
+        user: document
+      })
     }
-   catch(err) {
-     //res.redirect('/')
-     return res.redirect('/')
-   }
-
-   if(profile.meta.code > 200) {
-     return res.redirect('/')
-     //return next(profile.meta.error_message)
-   }
-
-  res.render('profile', {
-		layout: 'auth_base',
-    user: profile.data
   })
-})
 })
 
 router.post('/profile', function(req, res) {
-  var user= req.body
+  var user = req.body
   //update the user
   Users.update(user, function(){
-  res.render('/profile', {
-    user: user,
-    success: 'profile updated!'
-  })
+    // res.render('profile', {
+    //   user: user,
+    //   success: 'profile updated!'
+    // })
+    res.redirect('/profile')
   })
 })
 

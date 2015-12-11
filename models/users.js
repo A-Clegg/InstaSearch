@@ -28,6 +28,7 @@ exports.find = function(id, callback) {
 exports.update = function(user, callback) {
   //get users collection
   var collection = db.get().collection('users')
+  console.log(user)
   //user._id = ObjectId(user._id)
   //update the user
   collection.update({'_id': user._id},
