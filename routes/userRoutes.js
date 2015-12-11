@@ -29,10 +29,17 @@ router.get('/dashboard', function(req, res) {
       return res.redirect('/')
     }
 
-    //console.log(feed)
-    res.render('dashboard', {
-      layout: 'auth_base',
-      feed: feed.data
+    Users.find(req.session.userId, function(document) {
+      if (!document) {
+        res.redirect('/')
+      } else {
+        //console.log(feed)
+        res.render('dashboard', {
+          layout: 'auth_base',
+          feed: feed.data,
+          searches: document.tags
+        })
+      }
     })
   })
 })
@@ -89,17 +96,13 @@ router.post('/profile', function(req, res) {
 
 // taylor
 router.get('/search', function(req, res) {
-  res.render('search', {
-    layout: 'auth_base'
-  })
 
   Users.find(req.session.userId, function(document) {
     if (!document) {
       res.redirect('/')
     } else {
-      res.render('profile', {
+      res.render('search', {
         layout: 'auth_base',
-        user: document,
         searches: document.tags
       })
     }
@@ -131,12 +134,37 @@ router.post('/search', function(req, res) {
       return res.redirect('/')
     }
 
-    //console.log(req.body)
-    res.render('search', {
-      layout: 'auth_base',
-      feed: feed.data,
-      search: req.body.search
-    })
+    Users.find(req.session.userId, function(document) {
+      if (!document) {
+        res.redirect('/')
+      }
+      else {
+        //console.log(req.body)
+          res.render('search', {
+          layout: 'auth_base',
+          feed: feed.data,
+          search: req.body.search,
+          searches: document.tags
+        })
+      }
+    }) // End Users.find callback function
+  }) // End request function
+}) // End post function
+
+router.post('/search/remove', function(req, res) {
+  var tag = req.body.search
+  // Remove the tag
+  Users.removeTag(req.session.userId, tag, function(document){
+    res.redirect('/dashboard')
+  })
+})
+
+router.post('/search/save', function(req, res) {
+  var tag = req.body.search
+  console.log(tag)
+  // Remove the tag
+  Users.addTag(req.session.userId, tag, function(document){
+    res.redirect('/dashboard')
   })
 })
 

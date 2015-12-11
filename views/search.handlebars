@@ -8,8 +8,8 @@
     </form>
 
     {{#if search}}
-    <form action="" method="post">
-      <input type="search" id="search" name="search" readonly value="{{ search }}"/>
+    <form action="/search/save" method="post">
+      <input type="text" id="search" name="search" readonly value="{{ search }}"/>
       <button type="submit">Save Search</button>
     </form>
     {{/if}}
