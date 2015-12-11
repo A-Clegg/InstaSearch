@@ -1,6 +1,8 @@
 var request=require('request')
 var express = require('express')
 var router = express.Router()
+var Users = require('../models/users')
+var db	= require('../db.js')
 
 router.get('/dashboard', function(req, res) {
   var options =
@@ -68,7 +70,7 @@ router.get('/profile', function(req, res, next) {
 })
 })
 
-router.post('/profile', function(req, res) {
+request.post('/profile', function(req, res) {
   var user= req.body
   //update the user
   Users.update(user, function(){
