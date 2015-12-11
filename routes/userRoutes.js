@@ -70,7 +70,7 @@ router.get('/profile', function(req, res, next) {
 })
 })
 
-request.post('/profile', function(req, res) {
+router.post('/profile', function(req, res) {
   var user= req.body
   //update the user
   Users.update(user, function(){

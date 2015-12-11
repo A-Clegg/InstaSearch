@@ -30,11 +30,13 @@ exports.update = function(user, callback) {
   var collection = db.get().collection('users')
   //user._id = ObjectId(user._id)
   //update the user
-  collection.update({'_id': user._id}, {
-    $set: user}, function(err, result){
-    assert.equal(err, null)
-    assert.equal(1, result.result.n)
-    console.log('updated 1 document in the users collection')
-    callback()
-  })
+  collection.update({'_id': user._id},
+    {$set: user},
+    function(err, result){
+      assert.equal(err, null)
+      assert.equal(1, result.result.n)
+      console.log('updated 1 document in the users collection')
+      callback()
+    }
+  )
 }
