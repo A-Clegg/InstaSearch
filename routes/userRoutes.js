@@ -68,7 +68,8 @@ router.get('/profile', function(req, res, next) {
     } else {
       res.render('profile', {
     		layout: 'auth_base',
-        user: document
+        user: document,
+        searches: document.tags
       })
     }
   })
@@ -118,7 +119,7 @@ router.post('/search', function(req, res) {
       return res.redirect('/')
     }
 
-    console.log(req.body)
+    //console.log(req.body)
     res.render('search', {
       layout: 'auth_base',
       feed: feed.data,
