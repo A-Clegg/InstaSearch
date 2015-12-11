@@ -116,7 +116,8 @@ router.post('/search', function(req, res) {
     // console.log(feed)
     res.render('search', {
       layout: 'auth_base',
-      feed: feed.data
+      feed: feed.data,
+      search: req.body.search
     })
   })
 })
