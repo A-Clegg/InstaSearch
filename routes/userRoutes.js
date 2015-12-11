@@ -118,7 +118,7 @@ router.post('/search', function(req, res) {
       return res.redirect('/')
     }
 
-    // console.log(feed)
+    console.log(req.body)
     res.render('search', {
       layout: 'auth_base',
       feed: feed.data,

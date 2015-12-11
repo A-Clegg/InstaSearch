@@ -4,14 +4,20 @@
     <form action="" method="post">
       <span class="icon"><i class="fa fa-search"></i></span>
       <input type="search" id="search" name="search" placeholder="Search..." />
-      <button type="submit">Search</button> 
+      <button type="submit">Search</button>
     </form>
-    
-    <button type="save">Save Search</button>
+
+    {{#if search}}
+    <form action="" method="post">
+      <input type="search" id="search" name="search" readonly value="{{ search }}"/>
+      <button type="submit">Save Search</button>
+    </form>
+    {{/if}}
+
   </div>
 </div>
 
 <div class="content">
   {{> posts}}
-  
+
 </div><!-- end of content div-->
