@@ -92,6 +92,18 @@ router.get('/search', function(req, res) {
   res.render('search', {
     layout: 'auth_base'
   })
+
+  Users.find(req.session.userId, function(document) {
+    if (!document) {
+      res.redirect('/')
+    } else {
+      res.render('profile', {
+        layout: 'auth_base',
+        user: document,
+        searches: document.tags
+      })
+    }
+  })
 })
 
 router.post('/search', function(req, res) {
