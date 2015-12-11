@@ -153,6 +153,7 @@ router.post('/search', function(req, res) {
 
 router.post('/search/remove', function(req, res) {
   var tag = req.body.search
+  console.log(tag)
   // Remove the tag
   Users.removeTag(req.session.userId, tag, function(document){
     res.redirect('/dashboard')

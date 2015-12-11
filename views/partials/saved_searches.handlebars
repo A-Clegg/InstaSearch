@@ -1,11 +1,13 @@
 <div class="savedsearches">
   <p><b>Saved Searches:</b></p>
   {{#each searches}}
-  <form action="/search" method="post">
-  <!--<form action="/search" method="post">-->
-    <input type="hidden" name="search" id="search" value="{{ this }}"/>
-    <button type="submit" class="savedsearch_button" value="{{ this }}"/>
-  </form>
-  <!--<a class="savedsearch_button" href="/search">{{ this.name }}</a> -->
+    <form action="/search/remove" method="post">
+      <input type="hidden" name="search" id="search" value="{{ this }}"></input>
+      <button type="submit" class="saved_remove_button right">X</button>
+    </form>
+    <form action="/search" method="post">
+      <input type="hidden" name="search" id="search" value="{{ this }}"></input>
+      <button type="submit" class="savedsearch_button">#{{ this }}</button>
+    </form>
   {{/each}}
 </div>
